@@ -1,0 +1,36 @@
+<div class="container">
+  <h2>name {{currentUser.firstName}} {{currentUser.firstName}} </h2>
+    A progress bar:
+    <ngb-progressbar showValue="true" type="success" [value]="65">
+    </ngb-progressbar>
+
+</div>
+
+<div class="container">
+  <ngb-tabset>
+    <ngb-tab title="Bacon">
+      <ng-template ngbTabContent>
+        <p class="mt-4">Content for tab 1.
+          <button type="button"
+                  class="btn btn-secondary"
+                  placement="bottom"
+                  (click)="open()">
+            Click me
+          </button>
+        </p>
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab title="Lettuce">
+      <ng-template ngbTabContent>
+        <p>Content for tab 2</p>
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab title="Tomatoes">
+      <ng-template ngbTabContent>
+        <p>Content for tab 3</p>
+      </ng-template>
+    </ngb-tab>
+  </ngb-tabset>
+</div>
+
+

@@ -1,0 +1,39 @@
+<div class="modal-header">
+  <h4 class="modal-title">Login</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <form class="form" role="form">
+    <div class="form-group">
+      <label for="username" >Login</label>
+      <input type="text" class="form-control" name="username" id="username"
+             [(ngModel)]="loginVM.username">
+    </div>
+    <div class="form-group">
+      <label for="password" >Password</label>
+      <input type="password" class="form-control" name="password" id="password"
+             [(ngModel)]="loginVM.password">
+    </div>
+    <div class="form-check">
+      <label class="form-check-label" for="rememberMe">
+        <input class="form-check-input" type="checkbox" name="rememberMe" id="rememberMe" [(ngModel)]="loginVM.rememberMe" checked>
+        <span >Remember me</span>
+      </label>
+    </div>
+  </form>
+  <p></p>
+  <div class="alert alert-warning">
+    <a class="alert-link" (click)="requestResetPassword()" >Did you forget your password?</a>
+  </div>
+  <div class="alert alert-warning">
+    <span >You don't have an account yet?</span>
+    <a class="alert-link" (click)="register()" >Register a new account</a>
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+  <button type="submit" class="btn btn-outline-primary" (click)="login()">Login</button>
+</div>
+
